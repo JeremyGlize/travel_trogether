@@ -1,7 +1,9 @@
 const Encore = require('@symfony/webpack-encore');
+
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // const TerserPlugin = require('terser-webpack-plugin');
+
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
@@ -65,11 +67,14 @@ Encore
     //enables Sass/SCSS support
     .enableSassLoader()
     .enablePostCssLoader()
+
     // .addPlugin(new CssMinimizerPlugin({
     //     minify: CssMinimizerPlugin.cssoMinify,
     //     parallel: true
     // }))
+
     // .addPlugin(new MiniCssExtractPlugin())
+
     // .addLoader({
     //     test: /\.(sc|sa|c)ss$/,
     //     use: [MiniCssExtractPlugin.loader,
