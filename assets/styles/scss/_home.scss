@@ -1,0 +1,68 @@
+// ******** CAROUSEL ******** //
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+}
+
+#slider {
+  overflow: hidden;
+  margin: 0 20px 20px;
+}
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 30s slidy infinite;
+}
+
+// ******** DERNIER ARTICLES ******** //
+
+.last-article {
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    @include font(GG_S, 28);
+  }
+}
+
+.articles-container-home {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .articles-card-home {
+    flex: 1 0 20%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px;
+    height: auto;
+    border: solid;
+  }
+}
+
+// ******** WORLD MAP ******** //
+
+.world-container {
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    @include font(GG_S, 28);
+  }
+  img {
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,26 @@
+<section class="navigation">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="{{ path('home') }}">Travel Together</a>
+        </div>
+        <nav>
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#"><span></span></a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="{{ path('home') }}">Accueil</a></li>
+                <li><a href="{{ path('article_listing') }}">Articles</a></li>
+                <li><a href="{{ path('destination') }}">Destinations</a></li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="{{ path('user_listing') }}">Utilisateurs</a></li>
+                {% endif %}
+                {% if app.user %}
+                    <li><a  href="{{ path('app_logout') }}">Se déconnecter</a></li>
+                {% else %}
+                    <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
+                    <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</section>

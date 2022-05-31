@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="edit-user-form">
+        <div class="container-form">
+            {{ form_start(form) }}
+            <div>
+                {{ form_row(form.firstName, {
+                    'label_attr': {'class': 'flex-form'}
+                }) }}
+            </div>
+            <div>
+                {{ form_row(form.lastName, {
+                    'label_attr': {'class': 'flex-form'}
+                }) }}
+            </div>
+            <div>
+                {{ form_row(form.email, {
+                    'label_attr': {'class': 'flex-form'}
+                }) }}
+            </div>
+            <div>
+                {{ form_row(form.pseudo, {
+                    'label_attr': {'class': 'flex-form'}
+                }) }}
+            </div>
+            <div>
+                {{ form_row(form.roles, {
+                    'label_attr': {'class': 'flex-form'}
+                }) }}
+            </div>
+            <div>
+                {{ form_row(form.save) }}
+            </div>
+            <div>
+                <button><a href="{{ path('user_listing') }}">Retour</a></button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+</section>
+
+{% endblock %}
+
+

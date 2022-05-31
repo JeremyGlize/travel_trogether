@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="new-article-form">
+            {{ form_start(articleForm, {'attr': {'class': 'articles-container-new'}}) }}
+            <div>
+                <h1>Raconte nous ton plus beau voyage :) !</h1>
+            </div>
+            <div>
+                {{ form_row(articleForm.title, {
+                    'label_attr': {'class': 'article-title-form'}
+                }) }}
+            </div>
+            <div>
+                {{ form_row(articleForm.content, {
+                    'label_attr': {'class': 'article-content-form'}
+                }) }}
+            </div>
+            {{ form_end(articleForm) }}
+    </section>
+
+{% endblock body %}

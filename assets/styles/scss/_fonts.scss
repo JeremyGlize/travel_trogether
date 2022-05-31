@@ -1,0 +1,4 @@
+// création des polices avec la mixin font-face
+@include font-face('GG_R', 'GalanoGrotesqueRegular', 400);
+@include font-face('GG_S', 'GalanoGrotesqueSemiBold', 600);
+@include font-face('GG_M', 'GalanoGrotesqueMedium', 200);

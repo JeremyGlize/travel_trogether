@@ -1,0 +1,52 @@
+footer{
+  background: $white;
+  height: auto;
+  width: 100%;
+  padding-top: 60px;
+  color: $black;
+
+    .footer-content{
+      @include flex(center, center, column);
+      text-align: center;
+
+      h3{
+        line-height: 3rem;
+        @include font(GG_R, 30);
+      }
+    }
+}
+
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  @include font(GG_M, 16);
+  color: $black;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+  li{
+    margin: 0 10px;
+    a{
+      text-decoration: none;
+      color: $black;
+      border: 1.1px solid white;
+      padding: 5px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.socials a i{
+  font-size: 30px;
+  width: 20px;
+  transition: color .4s ease;
+}
+.socials a:hover i{
+  color: aqua;
+}

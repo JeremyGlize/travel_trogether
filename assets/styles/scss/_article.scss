@@ -1,0 +1,67 @@
+.articles-container-new {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.articles-container-new h1 {
+  padding: 20px;
+  @include font(GG_R, 36);
+}
+.article-title-form {
+  padding: 20px 5px;
+  @include font(GG_R, 24);
+}
+
+.title-article-form {
+  border-bottom: solid;
+  @include font(GG_R, 16);
+}
+
+.button-article {
+  margin-left: 20px;
+}
+
+#cke_article_content {
+  margin: 20px;
+}
+
+// ******** ARTICLE LISTING ******** //
+
+//.articles {
+//  display: inline-flex;
+//}
+.articles-container-listing {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+
+  .articles-card-listing {
+    flex: 1 0 20%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px;
+    height: auto;
+    border: solid;
+
+    h3 {
+      @include font(GG_S, 22);
+    }
+  }
+}
+
+// ******** ARTICLE DETAILS ******** //
+
+.articles-container-details {
+  margin: 20px;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px;
+    @include font(GG_S, 28);
+  }
+ }

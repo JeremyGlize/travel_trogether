@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Inscription {% endblock %}
+
+{% block body %}
+<section class="register-form">
+        <div class="container-form">
+                {{ form_start(registrationForm) }}
+                <div>
+                        {{ form_row(registrationForm.firstName, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+                <div>
+                        {{ form_row(registrationForm.lastName, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+                <div>
+                        {{ form_row(registrationForm.pseudo, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+                <div>
+                        {{ form_row(registrationForm.email, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+                <div>
+                        {{ form_row(registrationForm.plainPassword.first, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+                <div>
+                        {{ form_row(registrationForm.plainPassword.second, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+                <div>
+                        {{ form_row(registrationForm.agreeTerms, {
+                                'label_attr': {'class': 'flex-form'}
+                        }) }}
+                </div>
+
+                <button type="submit" class="">S'enregistrer</button>
+                {{ form_end(registrationForm) }}
+        </div>
+</section>
+
+{% endblock %}

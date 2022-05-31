@@ -1,0 +1,36 @@
+.container-login-form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include font(GG_R, 18);
+  h1 {
+    padding: 20px 0;
+    @include font(GG_R, 24);
+  }
+}
+
+.login-form-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  margin-top: 20px;
+}
+
+.login-line {
+  border-bottom: solid;
+}
+
+.login-logout {
+  padding: 20px 0;
+}
+
+.login-button {
+  padding: 10px;
+  margin: 20px 0;
+  border: solid;
+  cursor: pointer;
+}

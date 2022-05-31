@@ -1,0 +1,40 @@
+.container-form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
+  .flex-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 5px 0;
+    @include font(GG_R, 18);
+  }
+}
+
+.signin-form {
+  background-color: white;
+  padding: 5px 0;
+  border-bottom: solid;
+  @include font(GG_R, 16);
+}
+
+#registration_form_plainPassword_first, #registration_form_plainPassword_second {
+  background-color: white;
+  padding: 5px 0;
+  border-bottom: solid;
+  @include font(GG_R, 16);
+}
+
+.label-signin {
+  visibility: hidden;
+}
+
+button {
+  padding: 10px;
+  margin: 20px 0;
+  border: solid;
+  cursor: pointer;
+  @include font(GG_R, 16);
+}

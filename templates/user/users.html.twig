@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+    <section class="dashboard-users">
+        <div class="container-dash">
+            <table class="dash-table">
+                <thead>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>e-mail</th>
+                    <th>Roles</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>
+                            {{ user.firstName }}
+                        </td>
+                        <td>
+                            {{ user.lastName }}
+                        </td>
+                        <td>
+                            {{ user.email }}
+                        </td>
+                        <td>
+                            {{ user.roles|join(', ') }}
+                        </td>
+                        <td class="">
+                            {#                    <a href="{{ path('user_toggle_role', {id: user.id, role: 'ROLE_ADMIN'}) }}">#}
+                            {#                        Changer le role admin#}
+                            {#                    </a>#}
+                            <a href="{{ path('user_edit', {id: user.id}) }}">
+                                <i class="fa fa-pen text-primary"></i>
+                            </a>
+
+                            <a href="{{ path('user_delete', {id: user.id}) }}">
+                                <i class="fa fa-trash text-danger"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+{% endblock %}

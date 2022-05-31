@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <section class="carousel">
+        <div id="slider">
+            <figure>
+                <img src="https://picsum.photos/853/480?random=1" alt="">
+                <img src="https://picsum.photos/853/480?random=2" alt="">
+                <img src="https://picsum.photos/853/480?random=3" alt="">
+                <img src="https://picsum.photos/853/480?random=4" alt="">
+                <img src="https://picsum.photos/853/480?random=1" alt="">
+            </figure>
+        </div>
+    </section>
+    <section class="last-article">
+        <h2>Dernier articles</h2>
+        <div class="articles-container-home">
+            <div class="articles-card-home">
+                <img src="" alt="">
+                <h3>Titre de l'article</h3>
+                <p></p>
+                <button>Lire plus</button>
+            </div>
+        </div>
+    </section>
+    <section class="world-map">
+        <div class="world-container">
+            <h2>Carte du Monde</h2>
+            <a href="{{ path('destination') }}"><img src="{{ asset('build/images/World_map.svg.png') }}" alt="Carte du monde"></a>
+        </div>
+    </section>
+{% endblock body %}

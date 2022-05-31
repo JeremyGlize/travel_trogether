@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <section class="articles">
+        {% if app.user %}
+        <button class="button-article" ><a href="{{ path('article_new') }}">Ajouter un article</a></button>
+        {% endif %}
+        <div class="articles-container-listing">
+            {% for article in articles %}
+            <div class="articles-card-listing">
+                <div>
+                    <h3>{{ article.title|raw }}</h3>
+                </div>
+                <div>
+                    <p>{{ article.content|u.truncate(150, '...', false)|raw }}</p>
+                    <p>{{ article.content|striptags|slice(0, 180)|raw }}</p>
+                    <button>
+                        <a href="{{ path('article_detail', {id: article.id}) }}">Lire plus</a>
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock%}
