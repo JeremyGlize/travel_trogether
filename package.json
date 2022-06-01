@@ -35,7 +35,7 @@
         "style-loader": "^3.3.1"
     },
     "engines": {
-        "node": "16.14",
-        "npm": "8.11"
+        "node": "16.x",
+        "npm": "8.x"
     }
 }
