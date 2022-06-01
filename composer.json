@@ -109,6 +109,7 @@
         }
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "symfony/debug-bundle": "6.0.*",
         "symfony/maker-bundle": "^1.0",
         "symfony/stopwatch": "6.0.*",
